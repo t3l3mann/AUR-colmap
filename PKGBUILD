@@ -1,7 +1,7 @@
 #!/bin/hint/bash
 # Maintainer : bartus <arch-user-repoᘓbartus.33mail.com>
 
-check_option "debug" "y" && BUILD_TYPE=Debug || BUID_TYPE=Release
+check_option "debug" "y" && BUILD_TYPE=Debug || BUILD_TYPE=Release
 
 ## Configuration env vars:
 _ver=4.1.0
@@ -21,8 +21,8 @@ arch=('i686' 'x86_64')
 url="https://colmap.github.io/"
 license=('GPL')
 groups=()
-depends=('cgal' 'ceres-solver' 'gflags' 'fmt' 'openimageio' 'suitesparse' 'freeglut' 'glew' 'google-glog' 'libjpeg' 'boost-libs' qt5-{base,svg} 'metis' 'flann')
-makedepends=('boost' 'cmake' 'eigen' 'git' 'ninja' 'python-sphinx')
+depends=('cgal' 'ceres-solver' 'gflags' 'fmt' 'openimageio' 'suitesparse' 'freeglut' 'glew' 'google-glog' 'libjpeg.so' 'boost-libs' qt5-{base,svg} 'metis' 'flann')
+makedepends=('boost' 'cmake' 'eigen' 'git' 'ninja' 'python-sphinx' 'libjpeg-turbo')
 if [ "$_BUILD_CUDA" == "ON" ] ; then 
   depends+=('onnxruntime-cuda' 'protobuf')
   makedepends+=('cuda')
